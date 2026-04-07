@@ -1,0 +1,72 @@
+Envolve:
+- Algoritmo paralelo utilizado, custos de sincronização
+e comunicação.
+
+	Métricas de desempenho:
+
+> Speedup
+> Eficiência
+> Escalabilidade
+
+	Speedup:
+
+Razão do tempo gasto para execução de um algoritmo ou
+aplicação sequenicalmente, com um único processador -
+T(1), e o tempo gasto na execução com P processadores -
+T(P), conforme a equação:
+
+	Eficiência:
+
+O quão eficaz é a adição de novos processadores
+
+E(P) =  S(P)
+       -----
+         P
+
+Se speedup = 10 foi obtido com 10 processadores,
+então eficiência = 1.0
+
+Se o mesmo speedup foi obtido com 20 processadores,
+então eficiência = 0.5
+
+> Normalmente, a eficiência é menor que 1.0 devido a:
+
+- Percentual de código PARALELIZÁVEL na aplicação;
+	(Lei de Amdahl)
+- Distribuição de carga entre processadores;
+- Quantidade de comunicação/sincronização da app.
+	
+--------------------------------------------------
+Superlinear:       E -> E > 1
+Linear:            E = 1
+Sublinear:         E < 1
+Retorno negativo:  E < 0
+--------------------------------------------------
+
+Speedup linear ocorre apenas em situações muito
+específicas.
+
+	Escalabilidade:
+
+- Como um programa se comporta conforme aumenta o número
+de processadores envolvidos na computação;
+- Um sistema é considerado escalável quando sua eficiência se
+mantém constante à medida que o número de processadores P
+aplicados à solução do problema aumenta.
+- Quando o tamanho do problema é mantido constante e o número
+de processadores cresce, dois fenômenos acontecem:
+	> Overhead de comunicação tende a aumentar;
+	> Eficiência diminui.
+	
+
+Deve-se aumentar proporcionalmente o tamanho do problema a ser
+resolvido, conforme o número P de processadores cresce, de modo a
+compensar o aumento natural da sobrecarga de comunicação e
+sincronização.
+
+	(Lei de Gustafson-Barsis)
+
+Considere um problema de tamanho S. Utilizando P processadores, esse
+problema leva um tempo T para ser executado. O sistema é considerado
+escalável se um problema de tamanho 2S executado em 2P processadores 
+também leva o mesmo tempo T.

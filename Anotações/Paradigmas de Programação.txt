@@ -1,0 +1,20 @@
+	Programação por memória compartilhada:
+
+- Variáveis de acesso compartilhado entre as threads;
+- Programador define as var's;
+- Necessário sincronização em *áreas críticas*;
+
+	Programação por troca de mensagens:
+
+- Send (thread envia) e Receive (thread receptora)
+de dados entre threads
+Em baixo nível, socket's estão envolvidos no processo
+de troca de mensagens mas é abstraído no pThreads.
+- Sem race condition, uma vez que não tem memória
+compartilhada, mas pode haver Deadlock.
+
+Deadlock: Um ou mais processos esperando por uma
+mensagem a ser enviada por um processo e situação
+de impasse.
+
+
